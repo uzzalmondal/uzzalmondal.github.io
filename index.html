@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        header nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        header nav a:hover {
+            text-decoration: underline;
+        }
+        section {
+            padding: 40px 20px;
+        }
+        .about, .skills, .projects, .contact {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        .skill-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .skill-item {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        .project-item {
+            margin: 10px 0;
+        }
+        .project-item h3 {
+            margin: 0;
+        }
+        .contact form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact input, .contact textarea {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .contact button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <p>Hello! I'm a passionate web developer with experience in building modern and responsive websites. I specialize in frontend technologies and love creating user-friendly and interactive experiences.</p>
+    </section>
+
+    <section id="skills" class="skills">
+        <h2>Skills</h2>
+        <div class="skill-list">
+            <div class="skill-item">HTML</div>
+            <div class="skill-item">CSS</div>
+            <div class="skill-item">JavaScript</div>
+            <div class="skill-item">React</div>
+            <div class="skill-item">Node.js</div>
+            <div class="skill-item">Git</div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <div class="project-item">
+            <h3>Personal Portfolio</h3>
+            <p>A responsive personal portfolio website to showcase my skills and projects. Built with HTML, CSS, and JavaScript.</p>
+        </div>
+        <div class="project-item">
+            <h3>Task Management App</h3>
+            <p>A web application to manage tasks. Built with React, Node.js, and MongoDB. Allows users to create, edit, and delete tasks.</p>
+        </div>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contact</h2>
+        <form onsubmit="handleSubmit(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            alert(`Thank you for your message, ${name}! We will get back to you soon.`);
+            
+            // Reset form after submission
+            document.getElementById('name').value = '';
+            document.getElementById('email').value = '';
+            document.getElementById('message').value = '';
+        }
+    </script>
+
+</body>
+</html>
