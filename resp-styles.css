@@ -1,0 +1,58 @@
+
+/* For Large Desktops and Laptops (Default Layout) */
+@media (min-width: 1024px) {
+    header .logo {
+        width: 80px;
+        height: 80px;
+    }
+    
+    header nav ul {
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+/* For Tablets (768px - 1023px) */
+@media (max-width: 1023px) {
+    header .container-inner {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    header .logo {
+        display: none; /* Hide logo on small devices */
+    }
+
+}
+
+/* For Mobile Devices (480px - 767px) */
+@media (max-width: 767px) {
+    header .container-inner {
+        padding: 1rem;
+        text-align: center;
+    }
+
+    header .logo {
+        display: none; /* Hide logo on small devices */
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+
+/* For Small Mobile Devices (Below 480px) */
+@media (max-width: 480px) {
+    header .logo {
+        display: none; /* Hide logo on small devices */
+    }
+
+    header nav ul {
+        gap: 0.3rem;
+    }
+
+    .about-section {
+        gap: 1rem;
+    }
+}
