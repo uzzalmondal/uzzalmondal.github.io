@@ -56,3 +56,14 @@
         gap: 1rem;
     }
 }
+
+
+@media (max-width: 768px) {
+    .slider-container {
+        width: 95%;
+        border-radius: 15px;
+    }
+    .slide {
+        height: 250px;
+    }
+}

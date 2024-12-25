@@ -267,6 +267,71 @@ h2 {
 }
 
 
+/* Slider Container */
+.slider-container {
+    position: relative;
+    width: 80%; /* Adjust as needed */
+    max-width: 800px; /* Maximum width for larger screens */
+    margin: 2rem auto;
+    overflow: hidden;
+    border-radius: 20px; /* Rounded corners for the TV effect */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Shadow to mimic the depth of a screen */
+    border: 8px solid #2c3e50; /* Dark border to resemble a TV frame */
+    background: #000; /* Black background */
+}
+
+/* Slides */
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Individual Slide */
+.slide {
+    min-width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Controls */
+.slider-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 5px;
+}
+.slider-container:before {
+    content: "";
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 8px;
+    background: #2c3e50;
+    border-radius: 4px;
+    z-index: 2;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.slider-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+
 footer {
     background: var(--primary-color);
     color: var(--secondary-color);
